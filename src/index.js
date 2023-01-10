@@ -1,9 +1,9 @@
-module.exports = function reverse (n) {
-    let result = 0;
-    while (n) {
-      result = result * 10 + n % 10;
-      n = Math.floor(n / 10);
+module.exports = function reverse(n) {
+    n = n + "";
+    if (n >= 0) {
+        return n.split("").reverse().join("");
     }
-  
-    return result;
+    else {
+        return (n.split("").reverse().join("")).slice(0, -1);
+    }
 }
